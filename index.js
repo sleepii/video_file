@@ -5,14 +5,14 @@ const token = process.env.token // a garder en version heroku
 const prefix = ("?");
 
 bot.on('ready', function () {
-    console.log("Je suis prêt à être utilisé.")
+    console.log("im ready to be used")
     bot.user.setActivity('rien').catch(console.error)
 });
 
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
-        return channel.send('Bienvenue sur le serveur de Alexpgm' + member.displayName)
-        console.log(`${member.displayName} à rejoind le serveur.`)
+        return channel.send('welcome to zink kittys server' + member.displayName)
+        console.log(`${member.displayName} joined the server.`)
     }).catch(console.error)
 });
 
@@ -27,15 +27,15 @@ bot.on('message', function (message){
 
 
 bot.on('message', msg => {
-    if (msg.content === "bonjour"){
-        msg.reply("Heureux de te revoir parmis nous.")
+    if (msg.content === "hi"){
+        msg.reply("hello!! :3")
     }
-    if (msg.content.match(/salut/i)) {
-            msg.reply('Je suis d\'accord avec toi.')
+    if (msg.content.match(/hello/i)) {
+            msg.reply('hewwo :D')
     }
-    if (msg.content === prefix + "site"){
-        msg.channel.send("https://alexpgm.000webhostapp.com/")
-        console.log("Une personne a demandé pour aller sur ton site.")
+    if (msg.content === prefix + "website"){
+        msg.channel.send("https://https://www.patreon.com/crystalbot/")
+        console.log("a person asked for you website! :3")
     }
 
 });
